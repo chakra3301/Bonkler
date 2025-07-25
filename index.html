@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONK'LER</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="BONK'LER">
+    <meta property="og:description" content="Welcome to BONK'LER - The ultimate bonk experience">
+    <meta property="og:image" content="preview.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BONK'LER">
+    <meta name="twitter:description" content="Welcome to BONK'LER - The ultimate bonk experience">
+    <meta name="twitter:image" content="preview.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .main-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .main-image {
+            width: 70%;
+            height: auto;
+            max-width: 70%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .banner-image {
+            max-width: 84%;
+            height: auto;
+            display: block;
+        }
+
+        .button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .button-image {
+            max-width: 35%;
+            height: auto;
+            display: block;
+        }
+
+        .mint-image {
+            position: absolute;
+            top: 50%;
+            left: 18%;
+            transform: translate(-50%, -50%);
+            max-width: 20%;
+            height: auto;
+            z-index: 13;
+        }
+
+        .testbox-overlay {
+            position: absolute;
+            top: 2.3%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .testbox-image {
+            max-width: 70%;
+            height: auto;
+            display: block;
+        }
+
+        .testbox-text {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 12;
+            white-space: nowrap;
+        }
+
+        .me-overlay {
+            position: absolute;
+            top: 2.3%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .me-image {
+            max-width: 17.5%;
+            height: auto;
+            display: block;
+        }
+
+        .dex-overlay {
+            position: absolute;
+            top: 2.3%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .dex-image {
+            max-width: 19%;
+            height: auto;
+            display: block;
+        }
+
+        .x-overlay {
+            position: absolute;
+            top: 2.3%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .x-image {
+            max-width: 19%;
+            height: auto;
+            display: block;
+        }
+
+        .textrame-overlay {
+            position: absolute;
+            top: 60%;
+            left: 54%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .textrame-image {
+            max-width: 70%;
+            height: auto;
+            display: block;
+        }
+
+        .textbox2-overlay {
+            position: absolute;
+            top: 60%;
+            left: 54.7%;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+        }
+
+        .textbox2-image {
+            max-width: 66.5%;
+            height: auto;
+            display: block;
+        }
+
+        .bonk-overlay {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .bonk-image {
+            max-width: 33%;
+            height: auto;
+            display: block;
+        }
+
+        .bonk2-overlay {
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .bonk2-image {
+            max-width: 40%;
+            height: auto;
+            display: block;
+        }
+
+        .bonkler-overlay {
+            position: absolute;
+            top: 90%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .bonkler-image {
+            max-width: 56%;
+            height: auto;
+            display: block;
+        }
+
+        .bonkler2-overlay {
+            position: absolute;
+            top: 90%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .bonkler2-image {
+            max-width: 175%;
+            height: auto;
+            display: block;
+        }
+
+        .frame-overlay {
+            position: absolute;
+            top: 80%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .frame-image {
+            max-width: 35%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        .content {
+            padding: 40px 0;
+        }
+
+        .content h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content p {
+            color: #666;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-image {
+                width: 90%;
+                max-width: 90%;
+            }
+
+            .banner-image {
+                max-width: 90%;
+            }
+
+            .button-image {
+                max-width: 45%;
+            }
+
+            .mint-image {
+                max-width: 25%;
+                left: 25%;
+            }
+
+            .testbox-image {
+                max-width: 80%;
+            }
+
+            .testbox-text {
+                font-size: 12px;
+                left: 60%;
+            }
+
+            .me-overlay {
+                left: 85%;
+            }
+
+            .me-image {
+                max-width: 20%;
+            }
+
+            .dex-overlay {
+                left: 90%;
+            }
+
+            .dex-image {
+                max-width: 22%;
+            }
+
+            .x-overlay {
+                left: 95%;
+            }
+
+            .x-image {
+                max-width: 22%;
+            }
+
+            .bonk-overlay {
+                left: 45%;
+            }
+
+            .bonk-image {
+                max-width: 25%;
+            }
+
+            .bonk2-image {
+                max-width: 50%;
+            }
+
+            .textrame-image {
+                max-width: 80%;
+            }
+
+            .textbox2-image {
+                max-width: 75%;
+            }
+
+            .frame-image {
+                max-width: 40%;
+            }
+
+            .bonkler-image {
+                max-width: 60%;
+            }
+
+            .bonkler2-image {
+                max-width: 200%;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-image {
+                width: 95%;
+                max-width: 95%;
+            }
+
+            .banner-image {
+                max-width: 95%;
+            }
+
+            .button-image {
+                max-width: 50%;
+            }
+
+            .mint-image {
+                max-width: 30%;
+                left: 25%;
+            }
+
+            .testbox-image {
+                max-width: 85%;
+            }
+
+            .testbox-text {
+                font-size: 10px;
+                left: 50%;
+            }
+
+            .me-overlay {
+                left: 80%;
+            }
+
+            .me-image {
+                max-width: 15%;
+            }
+
+            .dex-overlay {
+                left: 85%;
+            }
+
+            .dex-image {
+                max-width: 20%;
+            }
+
+            .x-overlay {
+                left: 90%;
+            }
+
+            .x-image {
+                max-width: 30%;
+            }
+
+            .bonk-overlay {
+                left: 50%;
+            }
+
+            .bonk-image {
+                max-width: 25%;
+            }
+
+            .bonk2-image {
+                max-width: 55%;
+            }
+
+            .textrame-image {
+                max-width: 85%;
+            }
+
+            .textbox2-image {
+                max-width: 80%;
+            }
+
+            .frame-image {
+                max-width: 45%;
+            }
+
+            .bonkler-image {
+                max-width: 65%;
+            }
+
+            .bonkler2-image {
+                max-width: 220%;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .main-image {
+                width: 98%;
+                max-width: 98%;
+            }
+
+            .banner-image {
+                max-width: 98%;
+            }
+
+            .button-image {
+                max-width: 55%;
+            }
+
+            .mint-image {
+                max-width: 35%;
+                left: 18%;
+            }
+
+            .testbox-image {
+                max-width: 90%;
+            }
+
+            .testbox-text {
+                font-size: 9px;
+                left: 30%;
+            }
+
+            .me-overlay {
+                left: 75%;
+            }
+
+            .me-image {
+                max-width: 18%;
+            }
+
+            .dex-overlay {
+                left: 80%;
+            }
+
+            .dex-image {
+                max-width: 20%;
+            }
+
+            .x-overlay {
+                left: 85%;
+            }
+
+            .x-image {
+                max-width: 27%;
+            }
+
+            .bonk-overlay {
+                left: 55%;
+            }
+
+            .bonk-image {
+                max-width: 30%;
+            }
+
+            .bonk2-image {
+                max-width: 60%;
+            }
+
+            .textrame-image {
+                max-width: 90%;
+            }
+
+            .textbox2-image {
+                max-width: 85%;
+            }
+
+            .frame-image {
+                max-width: 50%;
+            }
+
+            .bonkler-image {
+                max-width: 70%;
+            }
+
+            .bonkler2-image {
+                max-width: 240%;
+            }
+
+            .content h2 {
+                font-size: 18px;
+            }
+
+            .content p {
+                font-size: 12px;
+                padding: 0 10px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="main-section">
+            <img src="mainweb.png" alt="Main Web Image" class="main-image">
+            <div class="testbox-overlay">
+                <img src="testbox.png" alt="Test Box" class="testbox-image">
+                <div class="testbox-text">welcome to bonk'ler, bonker</div>
+            </div>
+            <div class="me-overlay">
+                <img src="ME.png" alt="ME" class="me-image">
+            </div>
+            <div class="dex-overlay">
+                <img src="dex.png" alt="DEX" class="dex-image">
+            </div>
+            <div class="x-overlay">
+                <img src="x.png" alt="X" class="x-image">
+            </div>
+            <div class="banner-overlay">
+                <img src="banner.png" alt="Banner" class="banner-image">
+            </div>
+            <div class="bonk-overlay">
+                <img src="bonk.png" alt="Bonk" class="bonk-image">
+            </div>
+            <div class="button-overlay">
+                <img src="button.png" alt="Button" class="button-image">
+                <img src="mint.png" alt="Mint" class="mint-image">
+            </div>
+            <div class="bonk2-overlay">
+                <img src="bonk2.png" alt="Bonk 2" class="bonk2-image">
+            </div>
+            <div class="textrame-overlay">
+                <img src="txtframe.png" alt="Text Frame" class="textrame-image">
+            </div>
+            <div class="textbox2-overlay">
+                <img src="textbox2.png" alt="Text Box 2" class="textbox2-image">
+            </div>
+            <div class="frame-overlay">
+                <img src="frame.png" alt="Frame" class="frame-image">
+            </div>
+            <div class="bonkler-overlay">
+                <img src="bonkler.png" alt="Bonkler" class="bonkler-image">
+            </div>
+            <div class="bonkler2-overlay">
+                <img src="bonkler2.png" alt="Bonkler 2" class="bonkler2-image">
+            </div>
+        </section>
+
+        <div class="content">
+            <div class="container">
+                <h2>BONK ! BONK ! BONKLER</h2>
+                <p>i know its krooked a dog made it lmao, bonklers are janky anyways</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
