@@ -127,6 +127,31 @@
             transform: scale(1.05);
         }
 
+        .tensor-overlay {
+            position: absolute;
+            top: 2.3%;
+            left: 88%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .tensor-image {
+            max-width: 20%;
+            height: auto;
+            display: block;
+        }
+
+        .tensor-button-link {
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .tensor-button-link:hover {
+            transform: scale(1.05);
+        }
+
         .testbox-overlay {
             position: absolute;
             top: 2.3%;
@@ -438,10 +463,14 @@
             }
 
             .x-overlay {
-                left: 95%;
+                left: 85%;
             }
 
             .x-image {
+                max-width: 22%;
+            }
+
+            .tensor-image {
                 max-width: 22%;
             }
 
@@ -540,10 +569,14 @@
             }
 
             .x-overlay {
-                left: 90%;
+                left: 80%;
             }
 
             .x-image {
+                max-width: 30%;
+            }
+
+            .tensor-image {
                 max-width: 30%;
             }
 
@@ -653,6 +686,10 @@
                 max-width: 27%;
             }
 
+            .tensor-image {
+                max-width: 27%;
+            }
+
             .bonk-overlay {
                 left: 55%;
             }
@@ -732,6 +769,11 @@
             <div class="x-overlay">
                 <a href="https://x.com/bonk_ler" target="_blank" class="x-button-link">
                     <img src="x.png" alt="X" class="x-image">
+                </a>
+            </div>
+            <div class="tensor-overlay">
+                <a href="https://www.tensor.trade/trade/2595afc6-179f-4fc5-b669-c369e91093a1" target="_blank" class="tensor-button-link">
+                    <img src="tensor.png" alt="Tensor" class="tensor-image">
                 </a>
             </div>
             <div class="banner-overlay">
